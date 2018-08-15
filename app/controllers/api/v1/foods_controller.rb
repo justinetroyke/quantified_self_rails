@@ -19,6 +19,13 @@ class Api::V1::FoodsController < ApplicationController
     end
   end
 
+  def update
+    food = Food.update(params[:id], food_params)
+    render json: food
+  rescue
+    render status: 400, json: {}
+  end
+
   private
     def food_params
       params.require(:food).permit(:name, :calories)
