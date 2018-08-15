@@ -64,7 +64,7 @@ describe 'Foods API' do
 
   it 'can update food' do
     food = create(:food)
-    params = { 'food': { name: 'Donut' } }
+    params = { 'food': { name: 'Donut', calories: '12' } }
 
     patch "/api/v1/foods/#{food.id}", params: params
 
@@ -73,6 +73,6 @@ describe 'Foods API' do
     food = JSON.parse(response.body)
 
     expect(food["name"]).to eq(params[:food][:name])
-    expect(food["calories"]).to eq(food[:calories].to_i)
+    expect(food["calories"]).to eq(12)
   end
 end
