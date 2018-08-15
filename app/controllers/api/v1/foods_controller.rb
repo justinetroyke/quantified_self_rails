@@ -7,7 +7,7 @@ class Api::V1::FoodsController < ApplicationController
   def show
     render json: Food.find(params[:id])
   rescue
-      render status: 404, json: {}
+    render status: 404, json: {}
   end
 
   def create
@@ -24,6 +24,12 @@ class Api::V1::FoodsController < ApplicationController
     render json: food
   rescue
     render status: 400, json: {}
+  end
+
+  def destroy
+    render json: Food.destroy(params[:id]), status: 204
+  rescue
+    render status: 404, json: {}
   end
 
   private

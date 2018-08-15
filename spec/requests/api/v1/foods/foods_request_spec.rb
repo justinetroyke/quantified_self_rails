@@ -84,4 +84,21 @@ describe 'Foods API' do
 
     expect(status).to eq(400)
   end
+
+  it 'can delete food' do
+    id = create(:food).id
+
+    expect(Food.count).to eq(1)
+
+    delete "/api/v1/foods/#{id}"
+
+    expect(response.status).to eq(204)
+    expect(Food.count).to eq(0)
+  end
+
+  it 'returns 404 error if you delete a non-exsistent food' do
+    delete "/api/v1/foods/728"
+
+    expect(status).to eq(404)
+  end
 end
