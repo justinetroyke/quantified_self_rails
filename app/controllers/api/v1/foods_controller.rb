@@ -12,12 +12,15 @@ class Api::V1::FoodsController < ApplicationController
 
   def create
     food = Food.new(food_params)
-    food.save
-    render json: food
+    if food.save
+      render json: food
+    else
+      render status: 400, json: {}
+    end
   end
 
-private
-  def food_params
-    params.require(:food).permit(:name, :calories)
-  end
+  private
+    def food_params
+      params.require(:food).permit(:name, :calories)
+    end
 end
