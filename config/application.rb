@@ -13,7 +13,7 @@ module QuantifiedSelfRails
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins '*'
-        resource '*', headers: :any, methods: [:get, :post, :options, :patch, :delete, :create]
+        resource '*', headers: :any
       end
     end
 
