@@ -10,6 +10,14 @@ module QuantifiedSelfRails
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
+    Rails.application.config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins 'localhost:4200'
+        resource '*',
+          headers: :any,
+          methods: %i(get post put patch delete options head)
+      end
+    end
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
