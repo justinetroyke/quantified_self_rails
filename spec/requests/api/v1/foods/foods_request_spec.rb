@@ -75,4 +75,13 @@ describe 'Foods API' do
     expect(food["name"]).to eq(params[:food][:name])
     expect(food["calories"]).to eq(12)
   end
+
+  it 'returns 400 if update food invalid' do
+    food = create(:food)
+    params = { 'food': {} }
+
+    patch "/api/v1/foods/#{food.id}", params: params
+
+    expect(status).to eq(400)
+  end
 end
