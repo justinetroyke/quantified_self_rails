@@ -12,7 +12,7 @@ module QuantifiedSelfRails
     config.load_defaults 5.2
     Rails.application.config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'https://justine-qs-rails.herokuapp.com/'
+        origins 'https://justinetroyke.github.io/quantified-self-fe/'
         resource '*',
           headers: :any,
           methods: %i(get post put patch delete options head)
