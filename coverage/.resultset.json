@@ -76,6 +76,36 @@
         1,
         1,
         null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/justinetroyke/turing/4mod/projects/quantified_self_rails/app/controllers/api/v1/foods_controller.rb": [
@@ -112,6 +142,6 @@
         null
       ]
     },
-    "timestamp": 1534292953
+    "timestamp": 1534293730
   }
 }
