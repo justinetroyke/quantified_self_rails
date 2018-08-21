@@ -1,24 +1,36 @@
-# README
+[![Waffle.io - Issues in progress](https://badge.waffle.io/justinetroyke/quantified_self_rails.svg?columns=all)](http://waffle.io/justinetroyke/quantified_self_rails)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+__Quick Start:__
 
-Things you may want to cover:
+This project assumes you have installed:
 
-* Ruby version
+*Ruby
+*Rails
+*Homebrew
+*Bundle
 
-* System dependencies
+*Clone down this repo
 
-* Configuration
+*run in the command line
+```
+bundle install
+bundle update
+rake db:{drop,create,migrate,seed}
+rails s
 
-* Database creation
+```
+*Create psql database for production, development and any other environment you would like.
 
-* Database initialization
 
-* How to run the test suite
+__Heroku Link__
 
-* Services (job queues, cache servers, search engines, etc.)
+https://justine-qs-rails.herokuapp.com/
 
-* Deployment instructions
+__Testing__
 
-* ...
+To run the full rspec testing suite, run
+```rspec```
+from the command line
+
+__Contributions__
+To make contributions please fork the repo and submit a PR. If you are fixing an existing issue from the Waffleboard please include which issue number it fixes.
